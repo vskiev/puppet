@@ -3,13 +3,27 @@ node 'node2.puppet.local' {
 
 }
 
-
-
-
-
 node default {
   
   include 'motd'
+
+  # Example:
+  # user {'username':
+  # ensure => present,
+  # uid    => '102',
+  # gid    => 'wheel',
+  # shell  => '/bin/bash',
+  # home   => '/home/username',
+  # managehome => true,
+  # }
+
+  user {'admin':
+  ensure      =>  present,
+  home        =>  '/home/admin',
+  managehome  =>  true, 
+  gid         =>  'wheel',
+  shell       => '/bin/bash',
+  }   
 
   # user { 'glscott_user':
   #         name       => 'glscott',
