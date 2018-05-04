@@ -17,12 +17,17 @@ node default {
   # managehome => true,
   # }
 
+  group {
+    ensure   =>  present,
+  }
+
   user {'admin':
-  ensure      =>  present,
-  home        =>  '/home/admin',
-  managehome  =>  true, 
-  gid         =>  'wheel',
-  shell       => '/bin/bash',
+    ensure      =>  present,
+    home        =>  '/home/admin',
+    managehome  =>  true, 
+    gid         =>  'admin',
+    groups      =>  'wheel',
+    shell       => '/bin/bash',
   }   
 
   # user { 'glscott_user':
