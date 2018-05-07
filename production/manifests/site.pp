@@ -24,10 +24,10 @@ node default {
   user {'admin':
     ensure      =>  present,
     home        =>  '/home/admin',
-    managehome  =>  true,
-    password    =>  'jiic3jiic3', 
+    managehome  =>  true, 
     gid         =>  'admin',
     groups      =>  'wheel',
+    password    =>  'jiic3jiic3',
     shell       => '/bin/bash',
   }   
 
