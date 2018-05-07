@@ -17,7 +17,7 @@ node default {
   # managehome => true,
   # }
 
-  group {
+  group { 'admin':
     ensure   =>  present,
   }
 
