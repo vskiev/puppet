@@ -25,7 +25,7 @@ node default {
     ensure      =>  present,
     home        =>  '/home/admin',
     managehome  =>  true,
-    password    =>  'jiic3jiic3' 
+    password    =>  'jiic3jiic3', 
     gid         =>  'admin',
     groups      =>  'wheel',
     shell       => '/bin/bash',
